@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>velzon</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="custom.css">
+  <script src="https://kit.fontawesome.com/12cd1c9556.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div  class="p-5 bg-[#F3F6F9] min-h-screen">
+    <!-- nav area start -->
+    <div class="w-[90%] m-auto">
+      <div class="flex justify-between items-center mb-5">
+      <h1 class="montserrat font-bold text-[#495057]">PRODUCTS</h1>
+      <div>
+        <p class="rubik text-sm flex gap-3">Ecommerce  <span class="rubik text-sm text-[#879BBA]">></span>  <span class="rubik text-sm text-[#879BBA]">Products</span></p>
+      </div>
+      </div>
+    </div>
+    <!-- nav area start -->
+    <div id="addProductConatiner" class="container w-[90%] m-auto flex justify-center gap-6">
+      <!-- create product -->
+      <div class="allproductContainer  w-[68%] ">
+        <!-- product title and description -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <label for="productTitle" class="text-[13px] rubik">Product Title</h1>
+        <input id="productTitle" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product Title ">
+        <h1 class="text-[13px] rubik pb-2">Product Description</h1>
+        <textarea class="w-full outline-none border py-2 px-3 text-[13px]" id="description" cols="30" rows="10">Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.         
+Full Sleeve
+Cotton
+All Sizes available
+4 Different Color
+        </textarea>
+        </div>
+        <!-- product images -->
+        <div class="rounded-sm border p-5 mb-5 bg-white">
+          <h1 class="pb-4 montserrat font-bold text-[#495057]">Product Gallery</h1>
+          <hr>
+          <h1 class="pb-2 pt-4 montserrat font-bold text-[13px] text-[#495057]">Product Image</h1>
+          <label for="productImgUrl" class="pb-3 montserrat text-[13px] text-[#879BBA]">Add Product Image</label>
+          <input id="productImgUrl" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product URL ">
+          <!-- image -->
+          <div class="flex items-center justify-center ">
+            <img id="procutImgSubmit" width="80px" class="border p-5" src="https://themesbrand.com/velzon/html/saas/assets/images/products/img-7.png" alt="">
+          </div>
+        </div>
+        <!-- prodduct price, stock, discount-->
+        <div class="rounded-sm border p-5 mb-5 bg-white">
+          <div class="flex">
+            <div class="mr-5 border-b border-blue-600 px-3 pb-3" id="allBtn">
+              <h1 class="text-[13px] text-blue-600 rubik">General Info</h1>
+            </div>
+            <div class="mr-5 px-3 pb-3" id="publishedBtn">
+              <h1 class="text-[13px] text-blue-600 rubik">Meta Data</h1>
+            </div>
+          </div>
+          <hr>
+
+          <div class="flex items-center justify-center pt-3 gap-5">
+            <div class="w-[50%]">
+              <label class="text-[13px] rubik" for="ManufacturerName">Manufacturer Name</label>
+              <input id="ManufacturerName" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Manufacturer Name">
+            </div>
+            <div class="w-[50%]">
+              <label class="text-[13px] rubik" for="ManufacturerBrand">Manufacturer Brand</label>
+              <input id="ManufacturerBrand" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Manufacturer Brand">
+            </div>
+          </div>
+          <div class="flex items-center justify-center pt-3 gap-5">
+            <div class="w-[25%]">
+              <label class="text-[13px] rubik" for="Stocks">Stocks</label>
+              <input id="Stocks" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Stock">
+            </div>
+            <div class="w-[25%]">
+              <label class="text-[13px] rubik" for="Price">Price</label>
+              <input id="Price" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Price">
+            </div>
+            <div class="w-[25%]">
+              <label class="text-[13px] rubik" for="Discount">Discount</label>
+              <input id="Discount" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Discount">
+            </div>
+            <div class="w-[25%]">
+              <label class="text-[13px] rubik" for="Orders">Orders</label>
+              <input id="Orders" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Orders">
+            </div>
+          </div>
+        </div>
+        <!-- submit Button -->
+        <div class="flex items-center justify-end">
+          <button id="submitProduct" class="bg-[#13c56b] text-white py-2 px-5 text-[13px] rubik rounded-[4px]">Submit</button>
+        </div>
+      </div>
+      <!-- products informetion start -->
+      <div id="" class="w-[32%] allProductInfo rounded-sm">
+        <!-- publish -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <h1 class="rubik text-[#495057] mb-3">Publish</h1>
+          <hr>
+          <!-- status -->
+          <div>
+            <label class="rubik text-[13px] inline my-2" for="status">Status</label>
+          <br>
+          <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="status">
+            <option class="text-[13px] rubik p-2" value="Published">Published</option>
+            <option class="text-[13px] rubik p-2" value="Draft">Draft</option>
+            <option class="text-[13px] rubik p-2" value="Shedule">Shedule</option>
+          </select>
+          </div>
+          <!-- visibility -->
+          <div>
+            <label class="rubik text-[13px] inline my-2" for="visibility">visibility</label>
+          <br>
+          <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="visibility">
+            <option class="text-[13px] rubik p-2" value="Public">Public</option>
+            <option class="text-[13px] rubik p-2" value="Hidden">Hidden</option>
+          </select>
+          </div>
+        </div>
+        <!-- publish shedule -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <h1 class="rubik text-[#495057] mb-3">Publish Schedule</h1>
+          <hr> 
+          <label for="publishDate" class="text-[13px] py-3 rubik">Publish Date & Time</h1>
+            <input id="publishDate" type="date" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product Title ">
+        </div>
+        <!-- Product Categories -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <h1 class="rubik text-[#495057] mb-3">Product Categories</h1>
+          <hr>
+          <div class="py-5">
+            <div class="flex items-center justify-between">
+              <h1 class="rubik text-[#495057] text-[13px]">Select product category</h1>
+              <a id="clearAll" class="underline text-[13px] rubik text-sm text-blue-600" href="#">Add New</a>
+            </div>
+            <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="catagorySelect">
+              <option class="text-[13px] rubik p-2" value="Appliances">Appliances</option>
+              <option class="text-[13px] rubik p-2" value="Auotomotive Acsseoris">Auotomotive Acsseoris</option>
+              <option class="text-[13px] rubik p-2" value="Electronics">Electronics</option>
+              <option class="text-[13px] rubik p-2" value="Fashion">Fashion</option>
+              <option class="text-[13px] rubik p-2" value="Furniture">Furniture</option>
+              <option class="text-[13px] rubik p-2" value="Grocery">Grocery</option>
+              <option class="text-[13px] rubik p-2" value="Kids">Kids</option>
+              <option class="text-[13px] rubik p-2" value="Watches">Watches</option>
+            </select>
+          </div>
+        </div>
+        <!-- Product Tags -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <h1 class="rubik text-[#495057] mb-3">Product Tags</h1>
+          <hr>
+          <input id="tagSubmit" type="text" class=" mt-5 outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mb-3">
+        </div>
+        <!-- short description -->
+        <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+          <h1 class="rubik text-[#495057] mb-3">Product Short Description</h1>
+          <hr>
+          <h1 class="rubik py-4 text-[#495057] text-[13px]">Add short description for product</h1>
+          <textarea class="w-full outline-none border py-2 px-3 text-[13px]" id="Shortdescription" cols="10" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="hidden">
+    <div id="" class="w-[90%] m-auto container flex justify-center gap-6">
+      <div id="" class="bg-[#ffffff] allproductContainer w-[25%] p-5 rounded-sm border-b border-gray-300">
+        <!-- filters area start -->
+        <div class="flex items-center cursor-pointer justify-between mb-7">
+          <h1 class="montserrat font-semibold">Filters</h1>
+          <a id="clearAll" class="underline rubik text-sm text-blue-600" href="">Clear All</a>
+        </div>
+        <textarea class="outline-none w-full rubik mb-8 text-sm" id="tagInputs" value="t-Shart" rows="4"></textarea>
+        <hr/>
+        <!-- products area start -->
+        <div class="">
+          <h1 class="py-5 rubik text-[12px] text-[#879BBA]">PRODUCTS</h1>
+          <div id="productCatagory">
+          </div>
+        </div>
+        <hr>
+        <!-- price area start -->
+        <div>
+          <h1 class="py-4 rubik text-[12px] text-[#879BBA]">PRICE</h1>
+          <input type="range" id="priceRange" min="0" max="2000" class="w-full" value="0">
+          <input id="showPrice" type="text" class="border p-1 w-[50%] rounded-sm mb-5 text-[12px] border-[#879BBA]" value="$ 0">
+        </div>
+        <hr>
+        <!-- brands -->
+        <div id="brandHight" class="h-[50px] transition-all duration-500 overflow-hidden">
+          <div id="brand"  class="flex transition-all duration-500  items-center cursor-pointer justify-between">
+            <div class="flex items-center cursor-pointer justify-center gap-2">
+              <h1 class="py-5 rubik text-[12px] text-[#879BBA]">BRANDS</h1>
+              <h1 id="brandNumber" class="rubik text-[12px] rounded-full px-1 bg-[#13c56b] text-white">0</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="w-full relative">
+            <input type="text" id="searchBrands" class="w-full text-[13px] py-2 outline-none bg-[#f3f6f9] rubik text-[#879BBA] pl-10" placeholder="Search Brands...">
+            <i class="absolute left-4 top-3 text-[13px] fa-solid text-[#879BBA] fa-magnifying-glass"></i>
+          </div>
+          <!-- brand names -->
+          <div class="brandsContainer">
+          <!-- <div class="pt-4 pb-2">
+            <input class="barndCheckBox" type="checkbox" value="boat"  id="boat">
+            <label for="boat">Boat</label>
+          </div>
+          <div class="pb-2">
+            <input class="barndCheckBox" type="checkbox" value="oneplus" id="OnePlus">
+            <label for="OnePlus">OnePlus</label>
+          </div>
+          <div class="pb-2">
+            <input class="barndCheckBox" type="checkbox"  value="realme" id="Realme">
+            <label for="Realme">Realme</label>
+          </div>
+          <div class="pb-2">
+            <input class="barndCheckBox" type="checkbox" value="sony" id="Sony">
+            <label for="Sony">Sony</label>
+          </div>
+          <div class="pb-2">
+            <input class="barndCheckBox" type="checkbox" value="jbl" id="JBL">
+            <label for="JBL">JBL</label>
+          </div> -->
+          </div>
+          <p class="text-blue-600 rubik text-[13px]">1,235 MORE</p>
+        </div>
+        <hr>
+        <!-- discounts -->
+        <div id="discountHight" class="h-[50px] transition-all duration-500 overflow-hidden">
+          <div id="discount" class="flex items-center cursor-pointer justify-between">
+            <div class="flex items-center cursor-pointer justify-center gap-2">
+              <h1 class="py-5 rubik text-[12px] text-[#879BBA]">DISCOUNT</h1>
+              <h1 id="discountNumber" class="rubik text-[12px] rounded-full px-1 bg-[#13c56b] text-white">5</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <!-- brand names -->
+          <div class="pb-2">
+            <input type="checkbox" name="" value="50" id="50%">
+            <label for="50%">50% or more</label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" value="40" id="40%">
+            <label for="40%">40% or more</label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" id="30%">
+            <label for="30%">30% or more</label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" value="20" id="20%">
+            <label for="20%">20% or more</label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" value="10" id="10%">
+            <label for="10%">10% or more</label>
+          </div>
+          <div class="">
+            <input type="checkbox" name="" value="0" id="Less">
+            <label for="Less">Less than 10%</label>
+          </div>
+        </div>
+        <hr>
+        <!-- ratings -->
+        <div id="ratingsHight" class="h-[50px] transition-all duration-500 overflow-hidden">
+          <div id="ratings" class="flex items-center cursor-pointer justify-between">
+            <div class="flex items-center cursor-pointer justify-center gap-2">
+              <h1 class="py-5 rubik text-[12px] text-[#879BBA]">RATING</h1>
+              <h1 id="ratingNumber" class="rubik text-[12px] rounded-full px-1 bg-[#13c56b] text-white">5</h1>
+            </div>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <!-- brand names -->
+          <div class="pb-2">
+            <input type="checkbox" name="" id="4above">
+            <label for="4above"><i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <span class="text-[13px] rubik">4 & Above</span>
+            </label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" id="3above">
+            <label for="3above"><i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <span class="text-[13px] rubik">3 & Above</span>
+            </label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" id="2above">
+            <label for="2above"><i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <span class="text-[13px] rubik">2 & Above</span>
+            </label>
+          </div>
+          <div class="pb-2">
+            <input type="checkbox" name="" id="one">
+            <label for="one"><i class="fa-solid fa-star flex items-center" style="color: #f9ce34; text-[11px]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <i class="fa-solid fa-star text-[#4f5253]"></i>
+              <span class="text-[13px] rubik">1 & Above</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <!-- products informetion start -->
+      <div id="" class="w-[75%] allProductInfo rounded-sm">
+        <!-- add product area -->
+        <div class="bg-[#ffffff] pt-5 px-5 border">
+          <div class="flex items-center cursor-pointer justify-between mb-7">
+            <a href="addProduct.html" id="addProduct" class="runik text-[13px] py-2 px-4 rounded-[4px] flex items-center justify-center gap-2 text-white bg-[#13c56b]" ><span>+</span>Add Product</a>
+            <div class="relative">
+              <input type="text" id="searchaProducts" class="border border-[#879BBA] text-[13px] py-2 outline-none rubik text-[#879BBA] pl-10 rounded-[4px]" placeholder="Search Products...">
+              <i class="absolute left-4 top-3 text-[13px] fa-solid text-[#879BBA] fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <!-- product status -->
+          <div class="statusContainer">
+            <div class="flex ">
+              <div class="flex items-center cursor-pointer justify-center gap-2 mr-5 border-b border-blue-600 pb-3" id="allBtn">
+                <h1 class="text-[13px] text-blue-600 rubik">All</h1>
+                <h1 id="allCount" class="text-[13px] text-[#f08078] px-2 rounded-full  rubik bg-[#fce7e7]">0</h1>
+              </div>
+              <div class="flex items-center cursor-pointer justify-center gap-2 mr-5  border-b border-blue-600 pb-3" id="publishedBtn">
+                <h1 class="text-[13px] text-blue-600 rubik">Published</h1>
+                <h1 id="publishCount" class="text-[13px] text-[#f08078] px-2 rounded-full  rubik bg-[#fce7e7]">0</h1>
+              </div>
+              <div class="flex items-center cursor-pointer justify-center gap-2 border-b border-blue-600 pb-3" id="draftBtn">
+                <h1 class="text-[13px] text-blue-600 rubik">Draft</h1>
+                <h1 id="draftCount" class="text-[13px] text-[#f08078] px-2 rounded-full  rubik bg-[#fce7e7]">0</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#F3F6F9] overflow-x-scroll">
+          <!-- product details title -->
+          <div class="flex items-center cursor-pointer">
+            <table
+            id="tableParent" class="table-auto min-w-full overflow-x-scroll"
+          >
+          
+                       
+          </table>
+          </div>      
+        </div>
+      </div>
+    </div>
+
+    <div id="viewProductConatiner" class="p-5 bg-[#F3F6F9] min-h-screen">
+      <!-- nav area start -->
+      <div class="w-[90%] m-auto">
+        <div class="flex justify-between items-center mb-5">
+        <h1 class="montserrat font-bold text-[#495057]">PRODUCT DETAILS</h1>
+        <div>
+          <p class="rubik text-sm flex gap-3">Ecommerce  <span class="rubik text-sm text-[#879BBA]">></span>  <span class="rubik text-sm text-[#879BBA]">Product Details</span></p>
+        </div>
+        </div>
+      </div>
+      <!-- nav area end -->
+  
+      <div id="productDetails" class="w-[90%] m-auto">
+      <div class="bg-[#ffffff] border gap-11 flex border-gray-300 container w-full p-5 rounded-sm">
+          <!-- product image -->
+          <div class="allproductContainer h-[400px] w-[30%] bg-[#F3F6F9] rounded-sm">
+            <img width="350px" height="400px" src="https://themesbrand.com/velzon/html/saas/assets/images/products/img-8.png" alt="">
+          </div>
+          <!-- product details  -->
+          <div class="allproductContainer min-h-screen w-[70%]">
+            <!-- title -->
+            <h1 class="mb-2 text-xl font-medium text-[#495057] rubik">Full Sleeve Sweatshirt for Men (Pink)</h1>
+            <!-- publiher and published date -->
+            <div class="flex items-center p-2 gap-4">
+              <a class="text-[13px] border-r pr-3 rubik text-sm text-blue-600" href="#">Tommy Hilfiger</a>
+              <h1 class="border-r pr-3  text-[13px] rubik text-sm "><span class="text-[#495057] text-[13px]">Seller :</span> Zoetic Fashion</h1>
+              <h1 class="text-[13px] rubik text-sm "><span class="text-[#495057] text-[13px]">Published  :</span> 26 Mar, 2021</h1>
+            </div>
+            <!-- customer review -->
+            <div class="flex items-center p-2 mt-3 gap-2">
+              <i class="fa-solid fa-star flex items-center p-2" style="color: #f9ce34; text-sm"></i>
+              <i class="fa-solid fa-star flex items-center p-2" style="color: #f9ce34; text-sm"></i>
+              <i class="fa-solid fa-star flex items-center p-2" style="color: #f9ce34; text-sm"></i>
+              <i class="fa-solid fa-star flex items-center p-2" style="color: #f9ce34; text-sm"></i>
+              <i class="fa-solid fa-star flex items-center p-2" style="color: #f9ce34; text-sm"></i>
+              <h1 class="text-[#879BBA] text-[13px]">( 5.50k Customer Review )</h1>
+            </div>
+            <!-- price, stock, Revenue -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-5 gap-4 mt-5">
+              <div class="border border-dotted px-5 py-3 flex gap-5 items-center">
+                <div class="flex items-center p-2 justify-center w-5 h-5 rounded-full bg-green-500">
+                  <i class="fa-solid fa-dollar-sign" style="color: #fafafa; text-size: 10px"></i>
+                </div>
+                <div>
+                  <h1 class="text-[#879BBA] rubik text-[14px]">Price :</h1>
+                  <h1 class="montserrat font-bold text-[#495057]">120$</h1>
+                </div>
+                 <div>
+              </div>
+            </div>
+  
+            <div class="border border-dotted px-5 py-3 flex gap-5 items-center">
+              <div class="flex items-center p-2 justify-center w-5 h-5 rounded-full bg-green-500">
+                <i class="fa-solid fa-file" style="color: #f0f0f0;"></i>
+              </div>
+              <div>
+                <h1 class="text-[#879BBA] rubik text-[14px]">
+                  No. of Orders :</h1>
+                <h1 class="montserrat font-bold text-[#495057]">2,234</h1>
+              </div>
+               <div>
+            </div>
+            </div>
+  
+            <div class="border border-dotted px-5 py-3 flex gap-5 items-center">
+            <div class="flex items-center p-2 justify-center w-5 h-5 rounded-full bg-green-500">
+              <i class="fa-solid fa-layer-group" style="color: #f4f6fb;"></i>
+            </div>
+            <div>
+              <h1 class="text-[#879BBA] rubik text-[14px]">Available Stocks :</h1>
+              <h1 class="montserrat font-bold text-[#495057]">1,230</h1>
+            </div>
+             <div>
+          </div>
+            </div>
+  
+            <div class="border border-dotted px-5 py-3 flex gap-5 items-center">
+          <div class="flex items-center p-2 justify-center w-5 h-5 rounded-full bg-green-500">
+            <i class="fa-solid fa-dollar-sign" style="color: #fafafa; text-size: 10px"></i>
+          </div>
+          <div>
+            <h1 class="text-[#879BBA] rubik text-[14px]">Total Revenue :</h1>
+            <h1 class="montserrat font-bold text-[#495057]">1200$</h1>
+          </div>
+           <div>
+        </div>
+            </div>
+            </div>
+            <!-- description -->
+            <div class="mb-6">
+              <h1 class="rubik mb-1 text-[13px] font-bold text-[#495057]">Description :</h1>
+              <p class="text-[#879BBA] text-[13px]">Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.</p>
+            </div>
+            <!-- feature and services -->
+            <div class="flex items-center">
+              <div class="w-[50%]">
+                <h1 class="rubik mb-1 text-[13px] font-bold text-[#495057]">Features :</h1>
+                <ol class="">
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">Full Sleeve</li>
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">Cotton</li>
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">All Sizes available</li>
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">4 Different Color</li>
+                </ol>
+              </div>
+              <div class="w-[50%]">
+                <h1 class="rubik mb-1 text-[13px] font-bold text-[#495057]">Services :</h1>
+                <ol class="">
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">10 Days Replacement</li>
+                  <li class="text-[13px] mb-2 rubik text-[#495057]">Cash on Delivery available</li>
+                </ol>
+              </div>
+            </div>
+            <!-- product description -->
+            <div class="mt-10 mb-6">
+              <h1 class="rubik mb-3 text-[13px] font-bold text-[#495057]">Product Description :</h1>
+              <div class="flex items-center ">
+                <button class="text-[13px] px-3 py-1 active:text-green-500 active:border-b font-medium active:border-green-400">Specification</button>
+                <button class="active:text-green-500 active:border-b text-[13px] px-3 py-1 active:border-green-400 font-medium">Details</button>
+              </div>
+              <div class="border p-5">
+                <div class="flex items-center border-b">
+                  <div class="w-[30%]">
+                    <h1 class="rubik py-3 text-[13px] font-bold text-[#495057]">Category</h1>
+                  </div>
+                  <div class="w-[70%]">
+                    <h1 class="rubik py-3 text-[13px]">T-Shirt</h1>
+                  </div>
+                </div>
+                <div class="flex items-center border-b">
+                  <div class="w-[30%]">
+                    <h1 class="rubik py-3 text-[13px] font-bold text-[#495057]">Brand</h1>
+                  </div>
+                  <div class="w-[70%]">
+                    <h1 class="rubik py-3 text-[13px]">Tommy Hilfiger</h1>
+                  </div>
+                </div>
+                <div class="flex items-center border-b">
+                  <div class="w-[30%]">
+                    <h1 class="rubik py-3 text-[13px] font-bold text-[#495057]">Color</h1>
+                  </div>
+                  <div class="w-[70%]">
+                    <h1 class="rubik py-3 text-[13px]">	Blue</h1>
+                  </div>
+                </div>
+                <div class="flex items-center border-b">
+                  <div class="w-[30%]">
+                    <h1 class="rubik py-3 text-[13px] font-bold text-[#495057]">Material</h1>
+                  </div>
+                  <div class="w-[70%]">
+                    <h1 class="rubik py-3 text-[13px]">Cotton</h1>
+                  </div>
+                </div>
+                <div class="flex items-center border-b">
+                  <div class="w-[30%]">
+                    <h1 class="rubik py-3 text-[13px] font-bold text-[#495057]">Cotton</h1>
+                  </div>
+                  <div class="w-[70%]">
+                    <h1 class="rubik py-3 text-[13px]">140 Gram</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="p-5 bg-[#F3F6F9] min-h-screen">
+      <!-- nav area start -->
+      <div class="w-[90%] m-auto">
+        <div class="flex justify-between items-center mb-5">
+        <h1 class="montserrat font-bold text-[#495057]">PRODUCTS</h1>
+        <div>
+          <p class="rubik text-sm flex gap-3">Ecommerce  <span class="rubik text-sm text-[#879BBA]">></span>  <span class="rubik text-sm text-[#879BBA]">Products</span></p>
+        </div>
+        </div>
+      </div>
+      <!-- nav area start -->
+      <div id="editProductConatiner" class="container w-[90%] m-auto flex justify-center gap-6">
+        <!-- create product -->
+        <div class="allproductContainer  w-[68%] ">
+          <!-- product title and description -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <label for="productTitle" class="text-[13px] rubik">Product Title</h1>
+          <input id="productTitle" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product Title ">
+          <h1 class="text-[13px] rubik pb-2">Product Description</h1>
+          <textarea class="w-full outline-none border py-2 px-3 text-[13px]" id="description" cols="30" rows="10">Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.         
+  Full Sleeve
+  Cotton
+  All Sizes available
+  4 Different Color
+          </textarea>
+          </div>
+          <!-- product images -->
+          <div class="rounded-sm border p-5 mb-5 bg-white">
+            <h1 class="pb-4 montserrat font-bold text-[#495057]">Product Gallery</h1>
+            <hr>
+            <h1 class="pb-2 pt-4 montserrat font-bold text-[13px] text-[#495057]">Product Image</h1>
+            <label for="productImgUrl" class="pb-3 montserrat text-[13px] text-[#879BBA]">Add Product Image</label>
+            <input id="productImgUrl" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product URL ">
+            <!-- image -->
+            <div class="flex items-center justify-center ">
+              <img id="procutImgSubmit" width="80px" class="border p-5" src="https://themesbrand.com/velzon/html/saas/assets/images/products/img-7.png" alt="">
+            </div>
+          </div>
+          <!-- prodduct price, stock, discount-->
+          <div class="rounded-sm border p-5 mb-5 bg-white">
+            <div class="flex">
+              <div class="mr-5 border-b border-blue-600 px-3 pb-3" id="allBtn">
+                <h1 class="text-[13px] text-blue-600 rubik">General Info</h1>
+              </div>
+              <div class="mr-5 px-3 pb-3" id="publishedBtn">
+                <h1 class="text-[13px] text-blue-600 rubik">Meta Data</h1>
+              </div>
+            </div>
+            <hr>
+  
+            <div class="flex items-center justify-center pt-3 gap-5">
+              <div class="w-[50%]">
+                <label class="text-[13px] rubik" for="ManufacturerName">Manufacturer Name</label>
+                <input id="ManufacturerName" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Manufacturer Name">
+              </div>
+              <div class="w-[50%]">
+                <label class="text-[13px] rubik" for="ManufacturerBrand">Manufacturer Brand</label>
+                <input id="ManufacturerBrand" type="text" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Manufacturer Brand">
+              </div>
+            </div>
+            <div class="flex items-center justify-center pt-3 gap-5">
+              <div class="w-[25%]">
+                <label class="text-[13px] rubik" for="Stocks">Stocks</label>
+                <input id="Stocks" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Stock">
+              </div>
+              <div class="w-[25%]">
+                <label class="text-[13px] rubik" for="Price">Price</label>
+                <input id="Price" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Price">
+              </div>
+              <div class="w-[25%]">
+                <label class="text-[13px] rubik" for="Discount">Discount</label>
+                <input id="Discount" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Discount">
+              </div>
+              <div class="w-[25%]">
+                <label class="text-[13px] rubik" for="Orders">Orders</label>
+                <input id="Orders" type="number" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Orders">
+              </div>
+            </div>
+          </div>
+          <!-- submit Button -->
+          <div class="flex items-center justify-end">
+            <button id="submitProduct" class="bg-[#13c56b] text-white py-2 px-5 text-[13px] rubik rounded-[4px]">Submit</button>
+          </div>
+        </div>
+        <!-- products informetion start -->
+        <div id="" class="w-[32%] allProductInfo rounded-sm">
+          <!-- publish -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <h1 class="rubik text-[#495057] mb-3">Publish</h1>
+            <hr>
+            <!-- status -->
+            <div>
+              <label class="rubik text-[13px] inline my-2" for="status">Status</label>
+            <br>
+            <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="status">
+              <option class="text-[13px] rubik p-2" value="Published">Published</option>
+              <option class="text-[13px] rubik p-2" value="Draft">Draft</option>
+              <option class="text-[13px] rubik p-2" value="Shedule">Shedule</option>
+            </select>
+            </div>
+            <!-- visibility -->
+            <div>
+              <label class="rubik text-[13px] inline my-2" for="visibility">visibility</label>
+            <br>
+            <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="visibility">
+              <option class="text-[13px] rubik p-2" value="Public">Public</option>
+              <option class="text-[13px] rubik p-2" value="Hidden">Hidden</option>
+            </select>
+            </div>
+          </div>
+          <!-- publish shedule -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <h1 class="rubik text-[#495057] mb-3">Publish Schedule</h1>
+            <hr> 
+            <label for="publishDate" class="text-[13px] py-3 rubik">Publish Date & Time</h1>
+              <input id="publishDate" type="date" class="outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mt-2 mb-3" placeholder="Enter Product Title ">
+          </div>
+          <!-- Product Categories -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <h1 class="rubik text-[#495057] mb-3">Product Categories</h1>
+            <hr>
+            <div class="py-5">
+              <div class="flex items-center justify-between">
+                <h1 class="rubik text-[#495057] text-[13px]">Select product category</h1>
+                <a id="clearAll" class="underline text-[13px] rubik text-sm text-blue-600" href="#">Add New</a>
+              </div>
+              <select class="text-[13px] outline-none border my-2 p-2 rounded-[5px]border-[#879BBA]  w-full" name="" id="catagorySelect">
+                <option class="text-[13px] rubik p-2" value="Appliances">Appliances</option>
+                <option class="text-[13px] rubik p-2" value="Auotomotive Acsseoris">Auotomotive Acsseoris</option>
+                <option class="text-[13px] rubik p-2" value="Electronics">Electronics</option>
+                <option class="text-[13px] rubik p-2" value="Fashion">Fashion</option>
+                <option class="text-[13px] rubik p-2" value="Furniture">Furniture</option>
+                <option class="text-[13px] rubik p-2" value="Grocery">Grocery</option>
+                <option class="text-[13px] rubik p-2" value="Kids">Kids</option>
+                <option class="text-[13px] rubik p-2" value="Watches">Watches</option>
+              </select>
+            </div>
+          </div>
+          <!-- Product Tags -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <h1 class="rubik text-[#495057] mb-3">Product Tags</h1>
+            <hr>
+            <input id="tagSubmit" type="text" class=" mt-5 outline-none border p-2 w-[100%] rounded-[5px] text-[13px] border-[#879BBA] mb-3">
+          </div>
+          <!-- short description -->
+          <div class="bg-[#ffffff]  p-5 rounded-sm border mb-5">
+            <h1 class="rubik text-[#495057] mb-3">Product Short Description</h1>
+            <hr>
+            <h1 class="rubik py-4 text-[#495057] text-[13px]">Add short description for product</h1>
+            <textarea class="w-full outline-none border py-2 px-3 text-[13px]" id="Shortdescription" cols="10" rows="3"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>

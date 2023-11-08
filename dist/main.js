@@ -1063,4 +1063,5 @@ setFilteredStatus();
 renderProduct();
 renderViewProducts();
 renderEditedProduct();
-showBrand();
+showBrand()
+;
